@@ -12,7 +12,7 @@ public class Main {
 
   public Main() {
     // Write your code here
-
+    System.out.println(parseThis.substring(21,24));
 
   }
 
