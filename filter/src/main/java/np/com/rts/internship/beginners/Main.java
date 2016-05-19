@@ -22,7 +22,17 @@ public class Main {
 
   public Main() {
     // Write your code here
-
+      for(Animal a:originalList){
+        if(a.getClass().getName().equals("np.com.rts.internship.beginners.Carnivore")){
+          carnivores.add((Carnivore)a);
+        }
+        if(a.getClass().getName().equals("np.com.rts.internship.beginners.Herbicore")){
+          herbivores.add((Herbivore)a);
+        }
+        if(a.getClass().getName().equals("np.com.rts.internship.beginners.Omnivore")){
+          omnivores.add((Omnivore)a);
+        }
+      }
 
   }
   public static void main(String[] args) {
