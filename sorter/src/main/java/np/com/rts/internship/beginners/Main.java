@@ -19,8 +19,15 @@ public class Main {
 
   public Main() {
     // Write your code here
-
-
+      ArrayList<String> al = new ArrayList<String>();
+      for(String s:strings){
+          al.add(s);
+      }
+      Collections.sort(al);
+      strings = al.toArray(new String[al.size()]);
+      for(String s:strings){
+          System.out.print(s+"\t");
+      }
   }
 
   public static void main(String[] args) {
