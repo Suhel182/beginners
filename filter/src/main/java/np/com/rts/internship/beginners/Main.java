@@ -22,8 +22,17 @@ public class Main {
 
   public Main() {
     // Write your code here
-
-
+    for(Animal a:originalList){
+      if(a.getType().equals("herbivore")){
+        herbivores.add(a);
+      }
+      if(a.getType().equals("carnivore")){
+        carnivores.add(a);
+      }
+      if(a.getType().equals("omnivore")){
+        omnivores.add(a);
+      }
+    }
   }
   public static void main(String[] args) {
     new Main();
