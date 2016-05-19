@@ -24,6 +24,7 @@ public class Main {
     for(int i=0;i<ch.length-3;i++){
       if(decryptedText.substring(i,i+3).equals("3.0")){
         System.out.println(decryptedText.substring(i,i+3));
+        value = Double.parseDouble(decryptedText.substring(i,i+3));
       }
     }
   }
