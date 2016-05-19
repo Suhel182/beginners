@@ -19,8 +19,18 @@ public class Main {
 
   public Main() {
     // Write your code here
-
-
+    for(int i=0; i<simpleThings.length;i++){
+      for(int j=i;j>0;j--){
+        int a = (int) simpleThings[j].nothingSpecial.charAt(0);
+        int b = (int) simpleThings[j-1].nothingSpecial.charAt(0);
+        if(a<b){
+            SimpleThing temp = new SimpleThing(null,0);
+            temp = simpleThings[j];
+            simpleThings[j]=simpleThings[j-1];
+            simpleThings[j-1]=temp;
+        }
+      }
+    }
   }
 
   public static void main(String[] args) {
