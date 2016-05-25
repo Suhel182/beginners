@@ -2,7 +2,6 @@ package np.com.rts.internship.beginners;
 
 import java.util.*;
 
-
 public class Main {
 
   private String parseThis = "3127162:261111\n" +
@@ -14,19 +13,20 @@ public class Main {
 
   public Main() {
     // Write your code here
-    char[] ch = parseThis.toCharArray();
-    for(int i=0;i<ch.length;i++) {
-      int x = (int) ch[i];
-      x--;
-      ch[i] = (char) x;
-    }
-    String decryptedText = String.valueOf(ch);
-    for(int i=0;i<ch.length-3;i++){
-      if(decryptedText.substring(i,i+3).equals("3.0")){
-        System.out.println(decryptedText.substring(i,i+3));
-        value = Double.parseDouble(decryptedText.substring(i,i+3));
+      String[] s1 = null;
+      String[] s2 = null;
+      char[] ch = parseThis.toCharArray();
+      for(int i=0;i<ch.length;i++) {
+        if(!String.valueOf(ch[i]).equals("\n")){
+          int x = (int) ch[i];
+          x--;
+          ch[i] = (char) x;
+        }
       }
-    }
+      String decryptedText = String.valueOf(ch);
+      s1 = decryptedText.split("\n");
+      s2 = s1[1].split("-");
+      System.out.println(s2[1]);
   }
 
   public static void main(String[] args) {
