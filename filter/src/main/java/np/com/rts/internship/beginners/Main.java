@@ -2,7 +2,6 @@ package np.com.rts.internship.beginners;
 
 import java.util.*;
 
-
 public class Main {
 
   ArrayList<Animal> originalList = new ArrayList<Animal>() {{
@@ -22,18 +21,30 @@ public class Main {
 
   public Main() {
     // Write your code here
-      for(Animal a:originalList){
-        if(a.getClass().getName().equals("np.com.rts.internship.beginners.Carnivore")){
-          carnivores.add((Carnivore)a);
-        }
-        if(a.getClass().getName().equals("np.com.rts.internship.beginners.Herbicore")){
-          herbivores.add((Herbivore)a);
-        }
-        if(a.getClass().getName().equals("np.com.rts.internship.beginners.Omnivore")){
-          omnivores.add((Omnivore)a);
-        }
+    for (Animal a : originalList) {
+      if (a instanceof Carnivore) {
+        carnivores.add((Carnivore) a);
       }
+      if (a instanceof Herbivore) {
+        herbivores.add((Herbivore) a);
+      }
+      if (a instanceof Omnivore) {
+        omnivores.add((Omnivore) a);
+      }
+    }
 
+    System.out.println("Herbivores:");
+    for(Herbivore h:herbivores){
+      System.out.println(h.getName()+" has "+h.getLegs()+" legs.");
+    }
+    System.out.println("\nCarnivores:");
+    for(Carnivore c:carnivores){
+      System.out.println(c.getName()+" has "+c.getLegs()+" legs.");
+    }
+    System.out.println("\nOmnivores:");
+    for(Omnivore h:omnivores){
+      System.out.println(h.getName()+" has "+h.getLegs()+" legs.");
+    }
   }
   public static void main(String[] args) {
     new Main();

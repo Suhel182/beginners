@@ -7,4 +7,10 @@ public class Omnivore extends Animal {
   public Omnivore(String name, int legs) {
     super(name, legs);
   }
+  public String getName(){
+    return super.getName();
+  }
+  public int getLegs(){
+    return super.getLegs();
+  }
 }
